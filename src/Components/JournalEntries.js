@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import moment from "moment";
 import { FaTrash } from "react-icons/fa"; // Import delete icon from react-icons
+import { getDatabase, ref, onValue } from "firebase/database"; // Import Firebase Database methods
 
-const JournalEntries = ({ entries, onDelete }) => {
+const JournalEntries = ({ onDelete }) => {
+  const [entries, setEntries] = useState([]);
+
+  useEffect(() => {
+    const db = getDatabase();
+    const entriesRef = ref(db, "entries"); // Reference to the "entries" node in your database
+
+    // Set up a listener for changes
+    const unsubscribe = onValue(entriesRef, (snapshot) => {
+      const data = snapshot.val();
+      const loadedEntries = [];
+
+      for (const key in data) {
+        loadedEntries.push({ id: key, ...data[key] });
+      }
+
+      setEntries(loadedEntries); // Update state with the new entries
+    });
+
+    // Cleanup the listener on component unmount
+    return () => unsubscribe();
+  }, []);
+
   // Group entries by date
   const groupedEntries = entries.reduce((acc, entry) => {
     const date = moment(entry.date).format("YYYY-MM-DD"); // Format date for grouping
