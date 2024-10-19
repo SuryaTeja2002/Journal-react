@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Journal-react/static/css/main.3fa323e2.css",
-    "main.js": "/Journal-react/static/js/main.7e4e8120.js",
+    "main.css": "/Journal-react/static/css/main.7870681b.css",
+    "main.js": "/Journal-react/static/js/main.866e6578.js",
     "index.html": "/Journal-react/index.html",
-    "main.3fa323e2.css.map": "/Journal-react/static/css/main.3fa323e2.css.map",
-    "main.7e4e8120.js.map": "/Journal-react/static/js/main.7e4e8120.js.map"
+    "main.7870681b.css.map": "/Journal-react/static/css/main.7870681b.css.map",
+    "main.866e6578.js.map": "/Journal-react/static/js/main.866e6578.js.map"
   },
   "entrypoints": [
-    "static/css/main.3fa323e2.css",
-    "static/js/main.7e4e8120.js"
+    "static/css/main.7870681b.css",
+    "static/js/main.866e6578.js"
   ]
 }
