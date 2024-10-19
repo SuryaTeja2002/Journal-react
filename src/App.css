@@ -1,3 +1,4 @@
+/* Body styles */
 body {
   margin: 0; /* Remove default margin */
   height: 100vh; /* Ensure full height */
@@ -23,6 +24,7 @@ body {
   }
 }
 
+/* App container styles */
 .app-container {
   font-family: "Arial", sans-serif;
   background-color: rgba(
@@ -38,52 +40,51 @@ body {
   border-radius: 10px; /* Optional: Add rounded corners */
 }
 
+/* Header styles */
 .header {
   display: flex;
-  justify-content: space-between; /* This will place the heading on the left and the icon on the right */
+  justify-content: space-between; /* This will place the heading on the left and the icons on the right */
   align-items: center; /* Vertically center the icon with the heading */
-  /* background-color: rgba(0, 0, 0, 0.1); Transparent background */
   padding: 10px 15px;
   border-radius: 8px;
   margin-bottom: 20px;
 }
 
+/* Heading styles */
 .heading {
   font-size: 40px;
   margin: 0; /* Ensures no additional margin around the heading */
 }
 
-.text-icon {
-  background-color: #333;
-  color: white;
+/* Icon button styles */
+.header-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end; /* Align to the right */
+}
+
+.text-icon,
+.signout-icon {
+  background-color: #333; /* Dark background for both icons */
+  color: white; /* Icon color */
   border: none;
   cursor: pointer;
   font-size: 20px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 50px; /* Set to the same width */
+  height: 50px; /* Set to the same height */
+  border-radius: 50%; /* Circular shape */
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-.text-icon:hover {
-  background-color: #555;
+.text-icon:hover,
+.signout-icon:hover {
+  background-color: #555; /* Hover background for both icons */
 }
 
-/* .input-section {
-  margin: 10px 0;
-}
-
-.journal-input {
-  width: 95%;
-  height: 150px;
-  margin-bottom: 10px;
-  font-size: 16px;
-  padding: 10px;
-  resize: none; 
-} */
+/* Input section styles */
 .input-section {
   display: flex; /* Use flexbox to align items */
   flex-direction: column; /* Stack items vertically */
@@ -103,8 +104,9 @@ body {
   box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
+/* Save button styles */
 .save-button {
-  background-color: #2399dd; /* Change to a relevant green color */
+  background-color: #2399dd; /* Relevant blue color */
   color: white;
   border: none;
   padding: 10px 15px;
@@ -118,6 +120,7 @@ body {
   background-color: #185777; /* Darker shade on hover */
 }
 
+/* Journal entries section styles */
 .entries-section {
   margin-top: 20px;
 }
